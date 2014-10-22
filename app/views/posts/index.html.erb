@@ -10,6 +10,10 @@
     </tr>
   </thead>
   <tbody>
+    <% if @posts.empty? %>
+      <td class="noposts">No Posts available</td>
+    <% else %>
+
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.subject %></td>
@@ -20,8 +24,11 @@
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 <br>
 <%= link_to 'New Post', new_post_path %>
+<%= link_to 'Join Us', users_path %>
+<%= link_to 'Welcome Page', root_path %>
