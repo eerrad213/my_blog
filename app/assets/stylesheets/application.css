@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+.top_right {
+    text-align: right;
+}
+
+.noposts {
+    color: red;
+}
+
+.header {
+    border-bottom:1px solid cyan;
+}
+
+body {
+    background-size: cover;
+    background-image: url("http://i867.photobucket.com/albums/ab237/hdtyler/MAFbackground.png");
+    margin: 50px auto;
+
+    width:470px;
+    color: #eaeaea;
+}
