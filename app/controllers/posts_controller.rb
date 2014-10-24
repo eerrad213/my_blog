@@ -5,11 +5,10 @@ class PostsController < ApplicationController
   # GET /posts.json
 
   def index
-    @posts = Post.ordered_first_10
     if params[:search]
       @posts = Post.search(params[:search]).order("created_at DESC")
     else
-      @posts = Post.order("created_at DESC")
+      @posts = Post.ordered_first_10
     end
   end
 
