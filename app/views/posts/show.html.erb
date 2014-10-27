@@ -1,3 +1,10 @@
+<div class="top_right">
+<%= link_to "<button>Edit</button>".html_safe,edit_post_path(@post) %>
+<%= link_to "<button>Post Page</button>".html_safe, posts_path %>
+<%= link_to "<button>Join Us</button>".html_safe, users_path %>
+<%= link_to "<button>Home</button>".html_safe, root_path %>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -20,5 +27,4 @@
   <%# @post.draft_status %>
 </p> -->
 
-<%= link_to 'Edit', edit_post_path(@post) %> 
-<%= link_to 'Back', posts_path %>
+

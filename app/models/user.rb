@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
 	# Secure password features:
 	has_secure_password
 
+	# attr_accessible :email, :password, :password_confirmation
+
+	# validates_uniqueness_of :email
+
 	# Create a new remember token for the user:
 	def self.new_remember_token
 		SecureRandom.urlsafe_base64

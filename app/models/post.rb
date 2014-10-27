@@ -6,6 +6,7 @@ class Post < ActiveRecord::Base
   # It returns the posts whose titles contain one or more words that form the query
   def self.search(query)
     # where(:subject, query) -> This would return an exact match of the query
-    where("subject like ?", "%#{query}%")
+    # where("subject like ?", "%#{query}%")
+    where("subject LIKE :query OR body LIKE :query", query: "%#{query}%")
   end
 end
