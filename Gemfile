@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 group :test do
- gem 'capybara'
- gem 'rspec-rails'
+	gem 'capybara'
+	gem 'rspec-rails'
 end
 gem 'simplecov', :require => false, :group => :test
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -12,8 +12,8 @@ gem 'rails', '4.1.6'
 gem 'sqlite3', group: :development
 
 group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+	gem 'pg'
+	gem 'rails_12factor'
 end
 
 # Use SCSS for stylesheets
